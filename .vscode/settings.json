@@ -1,6 +1,11 @@
 {
     "cSpell.words": [
-        "fastapi"
+        "fastapi",
+        "passlib",
+        "psycopg",
+        "pydantic",
+        "SQLALCHEMY",
+        "sqlmodel"
     ],
     "Codegeex.RepoIndex": true,
     "cmake.ignoreCMakeListsMissing": true,
