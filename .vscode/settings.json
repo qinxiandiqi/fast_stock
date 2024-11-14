@@ -5,7 +5,8 @@
         "psycopg",
         "pydantic",
         "SQLALCHEMY",
-        "sqlmodel"
+        "sqlmodel",
+        "starlette"
     ],
     "Codegeex.RepoIndex": true,
     "cmake.ignoreCMakeListsMissing": true,
