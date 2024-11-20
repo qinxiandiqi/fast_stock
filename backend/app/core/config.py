@@ -1,3 +1,4 @@
+import logging
 import secrets
 import warnings
 from typing import Annotated, Any, Literal
@@ -14,6 +15,8 @@ from pydantic_core import MultiHostUrl
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing_extensions import Self
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def parse_cors(v: Any) -> list[str] | str:
     if isinstance(v, str) and not v.startswith("["):
@@ -55,6 +58,7 @@ class Settings(BaseSettings):
     @computed_field  # type: ignore[prop-decorator]
     @property
     def SQLALCHEMY_DATABASE_URI(self) -> str:
+        logger.info("SQLALCHEMY_DATABASE_URI: %s", self.SQLITE_DATABASE_URL)
         return self.SQLITE_DATABASE_URL
 
     SMTP_TLS: bool = True
