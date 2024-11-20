@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10.10"
 dependencies = [
+    "emails>=0.6",
     "fastapi[all]>=0.115.5",
     "passlib>=1.7.4",
     "pyjwt>=2.9.0",
