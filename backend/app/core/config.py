@@ -58,7 +58,6 @@ class Settings(BaseSettings):
     @computed_field  # type: ignore[prop-decorator]
     @property
     def SQLALCHEMY_DATABASE_URI(self) -> str:
-        logger.info("SQLALCHEMY_DATABASE_URI: %s", self.SQLITE_DATABASE_URL)
         return self.SQLITE_DATABASE_URL
 
     SMTP_TLS: bool = True
