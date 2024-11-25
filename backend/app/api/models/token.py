@@ -1,7 +1,7 @@
 from sqlmodel import Field, SQLModel, Session
 
-from app.models.users import User
-from app.models import users
+from app.api.models.users import User
+from app.api.models import users
 
 
 # JSON payload containing access token
