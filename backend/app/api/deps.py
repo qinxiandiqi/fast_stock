@@ -10,7 +10,7 @@ from sqlmodel import Session
 
 from app.core import security
 from app.core.config import settings
-from app.core.db import engine, init_db
+from app.core.db import engine
 from app.models.users import User
 from app.models.token import TokenPayload
 
@@ -21,7 +21,6 @@ reusable_oauth2 = OAuth2PasswordBearer(
 
 def get_db() -> Generator[Session, None, None]:
     with Session(engine) as session:
-        init_db(session)
         yield session
 
 
