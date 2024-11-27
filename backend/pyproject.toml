@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10.10"
 dependencies = [
     "bcrypt==4.0.1",
+    "efinance>=0.5.2",
     "emails>=0.6",
     "fastapi[all]>=0.115.5",
     "passlib>=1.7.4",
